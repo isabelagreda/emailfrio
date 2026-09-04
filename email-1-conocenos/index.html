@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>¿Seguís con ganas de estudiar un idioma?</title>
+  <title>Conocé IKARUGA y volvé a acercarte a un idioma</title>
   <style>
     :root{--ink:#151515;--red:#d72638;--blue:#1f4e79;--paper:#faf8f3;--line:#d8dde1;--soft:#f1f4f6;--gold:#f4b942}
     *{box-sizing:border-box}
@@ -17,6 +17,12 @@
     .hero{min-height:342px;background:url('Hero_Base_Fria_IKARUGA_Corporativo.png') 73% center/cover no-repeat;position:relative}
     .hero-panel{width:62%;min-height:342px;padding:42px 38px;color:#fff;background:linear-gradient(90deg,#153c5d 0%,#1f4e79f5 74%,#1f4e7900 100%);position:relative}
     .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--red),var(--gold),var(--blue))}
+    .mail.languages .hero-panel{background:linear-gradient(90deg,#d72638f0 0%,#b91f31e8 56%,#d7263800 100%)}
+    .mail.promo .hero-panel{background:linear-gradient(90deg,#151515f2 0%,#1f4e79e8 68%,#1f4e7900 100%)}
+    .mail.deadline .hero-panel{background:linear-gradient(90deg,#d72638f5 0%,#5b253ee8 68%,#5b253e00 100%)}
+    .mail.languages .hero:after{background:linear-gradient(90deg,#d72638,#f4b942,#1f4e79)}
+    .mail.promo .hero:after{background:linear-gradient(90deg,#f4b942,#d72638,#1f4e79)}
+    .mail.deadline .hero:after{background:linear-gradient(90deg,#151515,#d72638,#f4b942)}
     .sequence{margin:0 0 24px;color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
     .sequence b{display:inline-block;margin-right:10px;padding:4px 8px;background:var(--red);letter-spacing:1px}
     h1{margin:0;font-size:37px;line-height:1.08;font-weight:700;letter-spacing:0}
@@ -75,17 +81,29 @@
     .info-card h3{margin:0 0 8px;color:var(--blue);font-size:15px;line-height:1.18}
     .info-card p{margin:0;color:#38444b;font-size:13px;line-height:1.42}
     .cta-wrap{text-align:center;margin:28px 0 25px}
+    .cta-wrap.early{margin:22px 0 28px}
     .cta{display:inline-block;padding:17px 28px;background:var(--red);border-radius:999px;color:#fff;font-size:14px;font-weight:800;letter-spacing:.5px;text-decoration:none;text-transform:uppercase}
+    .cta-secondary{display:inline-block;margin-left:10px;padding:15px 22px;border:2px solid var(--blue);border-radius:999px;color:var(--blue);background:#fff;font-size:13px;font-weight:800;letter-spacing:.4px;text-decoration:none;text-transform:uppercase}
     .close{margin:0;color:#333d43;font-size:17px;line-height:1.55}
-    .trust{margin-top:32px;padding:26px;background:linear-gradient(135deg,#173b5b 0%,#1f4e79 62%,#d72638 155%);border-radius:16px;color:#fff;box-shadow:0 14px 30px #10283d24}
-    .trust h2{margin:0 0 8px;font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
-    .trust p{margin:0 0 18px;color:#eef6fb;font-size:13px}
-    .trust nav{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
-    .trust a{display:block;min-height:104px;padding:14px 10px;border:1px solid #ffffff35;border-radius:13px;background:#ffffff12;color:#fff;text-align:center;text-decoration:none}
-    .trust a:hover{background:#ffffff20}
-    .trust .icon.channel{width:28px;height:28px;margin:0 auto 10px;color:#fff}
-    .trust strong{display:block;font-size:13px;line-height:1.2}
-    .trust span{display:block;margin-top:5px;color:#dcecf5;font-size:11px;line-height:1.25}
+    .trust{margin-top:34px;padding:28px;background:linear-gradient(135deg,#173b5b 0%,#1f4e79 58%,#d72638 145%);border-radius:18px;color:#fff;box-shadow:0 16px 34px #10283d28}
+    .trust h2{margin:0 0 8px;font-size:22px;line-height:1.2}
+    .trust p{margin:0 0 20px;color:#eef6fb;font-size:15px;line-height:1.48}
+    .trust nav{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:10px}
+    .trust a{display:flex;align-items:center;gap:12px;min-height:78px;padding:13px 14px;border:1px solid #ffffff35;border-radius:15px;background:#ffffff14;color:#fff;text-decoration:none}
+    .trust a:nth-child(1),.trust a:nth-child(2){grid-column:auto}
+    .trust a:nth-child(3),.trust a:nth-child(4),.trust a:nth-child(5){min-height:68px}
+    .trust a:hover{background:#ffffff24}
+    .trust .icon.channel{width:30px;height:30px;margin:0;color:#fff;flex:0 0 auto}
+    .trust strong{display:block;font-size:14px;line-height:1.2}
+    .trust span{display:block;margin-top:4px;color:#dcecf5;font-size:12px;line-height:1.25}
+    .mail.languages .languages{margin-top:0}
+    .mail.promo .promo-banner,.mail.deadline .promo-banner{margin-top:0}
+    .mail.deadline .focus{background:linear-gradient(135deg,#fff5f5 0%,#fff8e7 100%);border-left-color:var(--gold)}
+    .trust.compact{padding:22px;margin-top:26px}
+    .trust.compact h2{font-size:18px}
+    .trust.compact nav{grid-template-columns:repeat(5,1fr)}
+    .trust.compact a{display:block;min-height:86px;padding:12px 8px}
+    .trust.compact .icon.channel{margin:0 auto 8px}
     .foot{margin-top:30px;padding-top:20px;border-top:1px solid #d3d9de;color:#535f66;font-size:15px}
     .foot strong{color:var(--ink)}
     .low{display:block;margin-top:14px;color:#7a8389;font-size:11px;line-height:1.4}
@@ -113,82 +131,51 @@
       .proof-row{grid-template-columns:1fr;gap:8px}
       .cards{grid-template-columns:1fr;gap:10px}
       .info-card{min-height:0}
-      .cta{display:block;padding:16px 18px;font-size:12px}
+      .cta,.cta-secondary{display:block;margin:0 0 10px;padding:16px 18px;font-size:12px}
       .close{font-size:16px}
       .trust{padding:22px 20px}
-      .trust nav{grid-template-columns:repeat(2,1fr)}
-      .trust a:last-child{grid-column:1/-1}
+      .trust nav{grid-template-columns:1fr}
+      .trust a,.trust a:nth-child(3),.trust a:nth-child(4),.trust a:nth-child(5){min-height:0}
+      .trust.compact nav{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <span class="preheader">Conocé la propuesta online de IKARUGA: clases en vivo, campus, materiales y acompañamiento.</span>
-  <main class="mail">
+  <span class="preheader">Una propuesta online con clases en vivo, campus, materiales y comunidad para aprender acompañado.</span>
+  <main class="mail brand">
     <header class="top">
       <img class="logo" src="Logo_IKARUGA_referencia.png" alt="IKARUGA Servicios">
       <p class="top-text">Formación en idiomas<span>Online</span></p>
     </header>
     <section class="hero">
       <div class="hero-panel">
-        <p class="sequence">CURSOS DE IDIOMAS ONLINE</p>
-        <h1>¿Seguís con ganas de estudiar un idioma?</h1>
+        <p class="sequence">CONOCÉ IKARUGA</p>
+        <h1>Un lugar para empezar a aprender un idioma con acompañamiento.</h1>
       </div>
     </section>
     <article class="content">
       <p class="kicker">IKARUGA SERVICIOS</p>
-      <p class="intro">Hola,<br><br>Si aprender un idioma sigue siendo una idea pendiente, queremos acercarte la propuesta de IKARUGA. Podés conocer cómo cursar online, qué idiomas están disponibles y conversar con un asesor educativo para orientarte sin compromiso.</p>
+      <p class="intro">Hola,<br><br>Tal vez hace un tiempo pensaste en estudiar un idioma y la idea quedó pendiente. En IKARUGA queremos volver a acercarte una propuesta simple de conocer: cursada online, clases en vivo, campus virtual, materiales y una comunidad que acompaña el recorrido.</p>
       <section class="focus">
-        <h2>Una propuesta pensada para cursar con acompañamiento</h2>
-        <p>En IKARUGA trabajamos formación online en idiomas con clases en vivo, campus virtual, materiales y comunidad. La idea es que tengas un espacio claro para aprender, practicar y resolver dudas durante la cursada.</p>
+        <h2>Primero conocé cómo se vive la cursada</h2>
+        <p>Antes de elegir un idioma o avanzar con una inscripción, podés mirar la propuesta, recorrer nuestros canales y hablar con un asesor educativo. La idea es que tengas claridad, confianza y una orientación real antes de decidir.</p>
       </section>
-      
-      <section class="visual-strip">
+      <p class="cta-wrap early"><a class="cta" href="[LINK_DE_WHATSAPP_CENTRAL_O_DEL_ASESOR]">QUIERO HABLAR CON UN ASESOR</a><a class="cta-secondary" href="https://ikaruga.com.ar/cursos/">VER CURSOS DE IDIOMAS</a></p><section class="trust">
+        <h2>Conocé IKARUGA antes de escribir</h2>
+        <p>Entrá a nuestros canales oficiales y mirá la propuesta, los cursos disponibles, novedades y opiniones.</p>
+        <nav>
+          <a href="https://ikaruga.com.ar/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 15h8"/></svg><strong>Entrar al sitio</strong><span>Conocé IKARUGA</span></a><a href="https://ikaruga.com.ar/cursos/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/><path d="M8 6h8"/></svg><strong>Ver cursos</strong><span>Explorá idiomas</span></a><a href="https://www.instagram.com/ikaruga.idiomas/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="m8 5 1.6-2h4.8L16 5"/><circle cx="12" cy="13" r="4"/></svg><strong>Ver Instagram</strong><span>Contenido y novedades</span></a><a href="https://www.facebook.com/ikaruga.idiomas/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4"/><path d="m8.6 13.5 6.8 4"/></svg><strong>Ir a Facebook</strong><span>Canal oficial</span></a><a href="https://www.facebook.com/ikaruga.idiomas/reviews/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21 7 14.2 2 9.3l6.9-1z"/></svg><strong>Leer opiniones</strong><span>Referencias disponibles</span></a>
+        </nav>
+      </section><section class="visual-strip">
         <div class="strip-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="m16 9 5-3v12l-5-3z"/></svg><strong>Clases en vivo</strong><span>Para aprender y consultar.</span></div>
         <div class="strip-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/><path d="M8 6h8"/></svg><strong>Campus virtual</strong><span>Materiales y actividades.</span></div>
         <div class="strip-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg><strong>Asesoría</strong><span>Orientación por WhatsApp.</span></div>
-      </section>
-      <section class="languages">
-        <h2>Cursos de idiomas que podés consultar</h2>
-        <div class="language-grid"><span><i class="flag jp"></i><b>JP</b>Japonés</span><span><i class="flag kr"></i><b>KR</b>Coreano</span><span><i class="flag cn"></i><b>CN</b>Chino Mandarín</span><span><i class="flag th"></i><b>TH</b>Tailandés</span><span><i class="flag de"></i><b>DE</b>Alemán</span><span><i class="flag ru"></i><b>RU</b>Ruso</span><span><i class="flag it"></i><b>IT</b>Italiano</span><span><i class="flag en"></i><b>EN</b>Inglés</span></div>
-      </section>
-      <section class="proof-row">
-        <div class="proof"><strong>8</strong><span>Idiomas disponibles para consultar.</span></div>
-        <div class="proof"><strong>Online</strong><span>Clases en vivo con apoyo de campus.</span></div>
-        <div class="proof"><strong>WhatsApp</strong><span>Orientación simple antes de avanzar.</span></div>
-      </section>
-      <section class="warm-note">
+      </section><section class="warm-note">
         <strong>Una consulta no te compromete.</strong>
         <span>La idea es que puedas retomar el contacto, hacer una pregunta concreta y recibir orientación antes de decidir.</span>
       </section>
-      <section class="cards">
-      <article class="info-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="m16 9 5-3v12l-5-3z"/></svg>
-        <span class="card-mark">01</span>
-        <h3>Clases en vivo</h3>
-        <p>Espacios para aprender, practicar y consultar.</p>
-      </article>
-      <article class="info-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/><path d="M8 6h8"/></svg>
-        <span class="card-mark">02</span>
-        <h3>Campus y materiales</h3>
-        <p>Recursos para acompañar la cursada.</p>
-      </article>
-      <article class="info-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span class="card-mark">03</span>
-        <h3>Comunidad</h3>
-        <p>Un recorrido de aprendizaje con presencia institucional.</p>
-      </article>
-      </section>
-      <p class="cta-wrap"><a class="cta" href="[LINK_DE_WHATSAPP_CENTRAL_O_DEL_ASESOR]">HABLAR POR WHATSAPP CON IKARUGA</a></p>
-      <p class="close">Cuando quieras avanzar, podemos ayudarte a elegir el idioma y la opción más adecuada para empezar.</p>
-      <section class="trust">
-        <h2>Canales oficiales para conocer IKARUGA</h2>
-        <p>Podés revisar nuestra web, cursos disponibles, redes y opiniones antes de responder.</p>
-        <nav>
-          <a href="https://ikaruga.com.ar/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 15h8"/></svg><strong>Web</strong><span>Conocé la institución</span></a><a href="https://ikaruga.com.ar/cursos/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/><path d="M8 6h8"/></svg><strong>Cursos</strong><span>Recorré las opciones</span></a><a href="https://www.instagram.com/ikaruga.idiomas/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="m8 5 1.6-2h4.8L16 5"/><circle cx="12" cy="13" r="4"/></svg><strong>Instagram</strong><span>Mirá novedades</span></a><a href="https://www.facebook.com/ikaruga.idiomas/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4"/><path d="m8.6 13.5 6.8 4"/></svg><strong>Facebook</strong><span>Canal oficial</span></a><a href="https://www.facebook.com/ikaruga.idiomas/reviews/"><svg class="icon channel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21 7 14.2 2 9.3l6.9-1z"/></svg><strong>Opiniones</strong><span>Referencias disponibles</span></a>
-        </nav>
-      </section>
+      
+      <p class="close">Si la idea de aprender un idioma todavía te mueve un poco, podemos ayudarte a retomarla con calma.</p>
       <footer class="foot">
         Saludos,<br>
         <strong>Asesor Educativo | IKARUGA Servicios</strong>
